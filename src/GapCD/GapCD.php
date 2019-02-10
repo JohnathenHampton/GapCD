@@ -9,7 +9,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\item\Item;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\player\PlayerMoveEvent;
-class Plugin extends PluginBase implements Listener
+class GapCD extends PluginBase implements Listener
 {
 	private $coolDown = 60;
 	private $timer = [];

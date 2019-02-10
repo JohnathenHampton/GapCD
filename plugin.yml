@@ -2,4 +2,4 @@ name: GapCD
 author: JohnathenHampton
 api: 3.0.0
 version: 1.0.0
-main: GapCD/GapCD
+main: GapCD\GapCD

@@ -11,7 +11,7 @@ use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\player\PlayerMoveEvent;
 class GapCD extends PluginBase implements Listener
 {
-	private $coolDown = 60;
+	private $coolDown = 120;
 	private $timer = [];
 	public function onEnable()
 	{
@@ -29,7 +29,7 @@ class GapCD extends PluginBase implements Listener
 				if (!isset($this->timer[$name]) or time() > $this->timer[$name]) {
 					$this->timer[$name] = time() + $this->coolDown;
 				} else {
-					$thrower->sendMessage($this->getConfig()->get("cooldown-message") . " " . strval($this->timer[$name] - time()) . " seconds remain");
+					$thrower->sendMessage($this->getConfig()->get("cooldown-message") . " " . strval($this->timer[$name] - time()) . " Seconds Left");
 					$event->setCancelled();
 				}
 			}
